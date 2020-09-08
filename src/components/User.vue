@@ -30,11 +30,14 @@
         name: "User",
         data:function () {
             return {
-                id:0,
+                id:2,
                 name:'',
                 bir:'',
                 content:'',
-                users: [],
+                users: [
+                    {id:1,username:'小黑',bir:'2012-12-12',content:'介绍'},
+                    {id:2,username:'小白',bir:'2012-12-12',content:'介绍'},
+                ],
             }
 
         },

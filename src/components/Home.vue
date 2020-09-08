@@ -38,10 +38,14 @@
             delNote(index) {
                 console.log(index);
                 // 根据下标去删除数组中的某个元素
-                this.msg_list.splice(index, 1)  // 参数1：从哪个下标开始删除 参数2：删除几个元素
+                this.msg_list.splice(index, 1); // 参数1：从哪个下标开始删除 参数2：删除几个元素
+                localStorage.removeItem('msgs');
+                localStorage.msgs = JSON.stringify(this.msg_list);
+
             },
             delAll() {
                 this.msg_list = [];
+                localStorage.clear();
             },
         }
     }
